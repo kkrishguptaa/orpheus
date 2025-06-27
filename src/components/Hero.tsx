@@ -51,10 +51,8 @@ export default function Hero() {
         {imageConfigs.map((config, index) => (
           <Image
             key={index}
-            src={images[index % images.length].src}
+            src={images[index % images.length]}
             alt={`Background ${index + 1}`}
-            width={config.width}
-            height={config.height}
             className={clsx(
               `absolute object-cover border-8 border-white`,
               config.pos
