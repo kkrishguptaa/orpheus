@@ -3,9 +3,9 @@ import PoemList from "@/components/PoemList";
 
 export default function Home() {
   return (
-    <>
+    <main className="snap-y snap-mandatory">
       <Hero />
       <PoemList />
-    </>
+    </main>
   );
 }
