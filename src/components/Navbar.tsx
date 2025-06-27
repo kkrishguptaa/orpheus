@@ -12,13 +12,13 @@ export default function Navbar() {
     },
   ];
   return (
-    <header className="flex flex-row w-screen items-center min-h-[10vh] bg-zinc-950 py-4 px-8 border-b border-zinc-800">
+    <header className="flex flex-row gap-8 w-screen items-center min-h-[10vh] py-4 px-8 border-b border-zinc-800">
       <nav className="order-2 sm:order-1 flex-1/3 flex flex-row items-center justify-end sm:justify-start space-x-8">
         {items.map((item) => (
           <Link
             key={item.name}
             href={item.href}
-            className="text-lg font-semibold text-zinc-300 hover:text-white hover:underline transition-colors"
+            className="text-xl font-semibold text-zinc-300 hover:text-white hover:underline transition-colors"
           >
             {item.name}
           </Link>

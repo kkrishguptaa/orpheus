@@ -39,9 +39,9 @@ export default async function Poem(props: Props) {
   console.log(poem.title);
 
   return (
-    <div>
+    <article className="prose prose-invert prose-zinc prose-2xl">
       <MDX />
-    </div>
+    </article>
   );
 }
 

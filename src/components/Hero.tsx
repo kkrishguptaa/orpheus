@@ -33,7 +33,7 @@ export default function Hero() {
   ];
 
   return (
-    <div className="overflow-hidden relative flex min-h-[90vh] items-center justify-center bg-gradient-to-b from-zinc-950 to-zinc-900">
+    <div className="overflow-hidden relative flex min-h-[90vh] items-center justify-center">
       <div className="z-10 text-white space-y-8">
         <h1 className="font-display text-7xl sm:text-8xl md:text-9xl">
           Orpheus

@@ -3,10 +3,15 @@ import { join } from 'path';
 
 const path = join('src', 'content', 'poems');
 
+export interface PoemFrontmatter {
+  title: string;
+  date: Date;
+}
+
 interface Poem {
   title: string;
   slug: string;
-  frontmatter: Record<string, string>;
+  frontmatter: PoemFrontmatter;
 }
 
 export async function getPoem(slug: string): Promise<Poem> {
