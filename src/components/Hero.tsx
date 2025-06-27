@@ -17,22 +17,18 @@ export default function Hero() {
     {
       pos: `-left-10/100 top-90/100 sm:left-10/100 sm:top-80/100 md:left-15/100 md:top-75/100 lg:left-20/100 lg:top-70/100`,
       width: 300,
-      height: 400,
     },
     {
-      pos: `left-5/100 top-10/100 sm:left-20/100 sm:top-15/100 md:left-30/100 md:top-20/100 lg:left-40/100 lg:top-25/100`,
+      pos: `left-5/100 top-10/100 sm:left-20/100 sm:top-15/100 md:left-30/100 md:top-20/100 lg:left-50/100 lg:top-25/100`,
       width: 250,
-      height: 300,
     },
     {
-      pos: `left-100/100 top-20/100 sm:left-80/100 sm:top-25/100 md:left-75/100 md:top-30/100 lg:left-70/100 lg:top-33/100`,
+      pos: `left-100/100 top-20/100 sm:left-80/100 sm:top-25/100 md:left-75/100 md:top-30/100 lg:left-80/100 lg:top-33/100`,
       width: 200,
-      height: 250,
     },
     {
-      pos: `left-80/100 top-85/100 sm:left-85/100 sm:top-80/100 md:left-80/100 md:top-80/100 lg:left-75/100 lg:top-75/100`,
+      pos: `left-100/100 top-85/100 sm:left-85/100 sm:top-80/100 md:left-80/100 md:top-80/100 lg:left-75/100 lg:top-75/100`,
       width: 450,
-      height: 450,
     },
   ];
 
@@ -52,11 +48,12 @@ export default function Hero() {
           <Image
             key={index}
             src={images[index % images.length]}
-            alt={`Background ${index + 1}`}
+            alt=""
             className={clsx(
               `absolute object-cover border-8 border-white`,
               config.pos
             )}
+            width={config.width}
             style={{
               transform: `translate(-50%, -50%)`,
             }}
