@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import { getPoems } from "../utils";
 
 interface Props {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -15,7 +15,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params;
   const { slug } = params;
   const { getPoem } = await import("../utils");
   const poem = await getPoem(slug);
@@ -27,7 +28,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function Poem({ params }: Props) {
+export default async function Poem(props: Props) {
+  const params = await props.params;
   const { slug } = params;
   const { getPoem } = await import("../utils");
   const poem = await getPoem(slug);
