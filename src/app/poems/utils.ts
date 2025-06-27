@@ -1,6 +1,5 @@
 import { lstatSync, readdirSync } from 'fs';
 import { join } from 'path';
-import { read } from 'gray-matter';
 
 const path = join('src', 'app', 'poems', '(content)');
 
@@ -11,28 +10,28 @@ interface Poem {
   rawContent: string;
 }
 
-export function getPoem(slug: string, iteration = false): Poem | Error {
+export async function getPoem(slug: string, iteration = false) {
   const file = join(slug, 'page.mdx');
-  const filePath = join(path, file);
+  const filePath = join('@', 'app', 'poems', '(content)', file);
 
-  if (!iteration && !readdirSync(path).includes(file)) {
+  if (!iteration && !readdirSync(path).includes(slug)) {
     return new Error(`Poem with slug "${slug}" not found.`);
   }
 
-  const matter = read(filePath);
+  // import the file and take the frontmatter exported variable
+  const { frontmatter } = await import(filePath);
 
   return {
-    title: matter.data.title,
+    title: frontmatter.title,
     slug,
-    frontmatter: matter.data,
-    rawContent: matter.content,
-  };
+    frontmatter,
+  } as Poem;
 }
 
-export function getPoems() {
+export async function getPoems() {
   const poems = readdirSync(path).filter(f => lstatSync(join(path, f)).isDirectory());
 
-  return poems.map(poem => {
-    return getPoem(poem, true) as Poem;
-  })
+  return Promise.all(poems.map(async (poem) => {
+    return getPoem(poem, true) as Promise<Poem>;
+  }));
 }
