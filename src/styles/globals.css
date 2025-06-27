@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@layer base {
+  :root {
+    @apply scroll-smooth bg-zinc-950 text-zinc-300;
+    @apply font-serif antialiased;
+    font-family: var(--font-eb-garamond);
+  }
+
+  .font-display {
+    @apply font-sans;
+    font-family: var(--font-italiana);
+  }
+}
