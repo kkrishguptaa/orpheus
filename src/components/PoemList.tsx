@@ -10,7 +10,10 @@ export default async function PoemList({ limit }: { limit?: number }) {
   );
 
   return (
-    <div className="snap-center relative w-screen pb-36 sm:pb-12 md:pb-0">
+    <div
+      id="poems"
+      className="snap-center relative w-screen pb-36 sm:pb-12 md:pb-0"
+    >
       <div className="flex flex-col items-center justify-center min-h-[50vh] p-12 sm:p-40 md:px-60 lg:px-80 xl:px-120">
         <h2 className="w-full text-6xl text-white font-black mb-8">Poems</h2>
         <nav className="w-full space-y-4 text-xl">

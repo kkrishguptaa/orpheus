@@ -1,4 +1,6 @@
+import { FiChevronsDown } from "react-icons/fi";
 import HeroBackdrop from "./HeroBackdrop";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -10,6 +12,9 @@ export default function Hero() {
         <p className="text-lg font-semibold">
           Collection of Poems — <i>Krish Gupta</i>
         </p>
+        <Link href="#poems">
+          <FiChevronsDown className="text-6xl animate-bounce" />
+        </Link>
       </div>
 
       <HeroBackdrop />
