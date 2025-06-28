@@ -1,5 +1,6 @@
 import Author from "@/components/Author";
 import Hero from "@/components/Hero";
+import LatinVelocity from "@/components/LatinVelocity";
 import PoemList from "@/components/PoemList";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <PoemList limit={10} />
       <Author />
+      <LatinVelocity />
     </main>
   );
 }
