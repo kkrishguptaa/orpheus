@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { getPoems } from "../utils";
 import TextPressure from "@/components/ui/text-pressure";
+import DateFact from "@/components/DateFact";
 
 interface Props {
   params: Promise<{
@@ -47,6 +48,10 @@ export default async function Poem(props: Props) {
       <main className="bg-zinc-950/90 flex flex-col w-full items-center justify-center min-h-[50vh] p-12 sm:px-40 md:px-60 lg:px-80 xl:px-120">
         <article className="prose prose-invert prose-zinc prose-2xl prose-p:my-0">
           <MDX />
+          <DateFact
+            date={poem.frontmatter.date.getDate()}
+            month={poem.frontmatter.date.getMonth()}
+          />
         </article>
       </main>
     </div>
