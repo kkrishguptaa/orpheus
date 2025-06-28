@@ -1,3 +1,4 @@
+import AnimatedCursor from "react-animated-cursor";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import "@/styles/globals.css";
@@ -23,6 +24,19 @@ export default function RootLayout({
   return (
     <html className={`${italiana.variable} ${ebGaramond.variable}`} lang="en">
       <body>
+        <AnimatedCursor
+          innerSize={8}
+          outerSize={35}
+          innerScale={1}
+          outerScale={3}
+          outerAlpha={0}
+          innerStyle={{
+            backgroundColor: "var(--cursor-color)",
+          }}
+          outerStyle={{
+            border: "3px solid var(--cursor-color)",
+          }}
+        />
         <Navbar />
         <>{children}</>
         <Footer />
