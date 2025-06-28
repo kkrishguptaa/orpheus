@@ -27,7 +27,7 @@ export default function RootLayout({
         <AnimatedCursor
           innerSize={8}
           outerSize={35}
-          innerScale={1}
+          innerScale={1.5}
           outerScale={3}
           outerAlpha={0}
           innerStyle={{

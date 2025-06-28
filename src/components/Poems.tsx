@@ -8,7 +8,7 @@ export default async function Poems() {
   );
 
   return (
-    <div className="snap-center relative w-screen pb-36 sm:pb-12 md:pb-0">
+    <div className="snap-center relative w-screen pb-36 sm:pb-12 md:pb-0 bg-zinc-950/90">
       <div className="flex flex-col items-center justify-center min-h-[50vh] p-12 sm:px-40 md:px-60 lg:px-80 xl:px-120">
         <h2 className="w-full text-6xl text-white font-black mb-8">Poems</h2>
         <nav className="w-full space-y-4 text-xl">
