@@ -136,8 +136,9 @@ Draw from this collection when discussing poetry, themes, or answering questions
       <div className="px-8 py-4 border-b border-zinc-800">
         <h2 className="text-2xl text-white">Chat with AI</h2>
         <p className="text-zinc-400 mt-1">
-          Talk to Orpheus, about Krish's poems, poetry, literature, or life.
-          Thoughts are its own and do not represent Krish, thou must remember.
+          Talk to Orpheus, about Krish&apos;s poems, poetry, literature, or
+          life. Thoughts are its own and do not represent Krish, thou must
+          remember.
         </p>
       </div>
       <div

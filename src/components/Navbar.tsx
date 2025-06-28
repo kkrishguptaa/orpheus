@@ -12,7 +12,7 @@ export default function Navbar() {
     },
   ];
   return (
-    <header className="flex flex-row justify-between gap-8 w-screen items-center min-h-[10vh] py-4 px-8 border-b border-zinc-800">
+    <header className="flex flex-row justify-between gap-8 w-screen items-center min-h-[10vh] py-4 px-8 border-b bg-zinc-950 border-zinc-800">
       <Link
         href="/"
         className="text-3xl font-semibold text-zinc-300 hover:text-white hover:underline transition-colors"

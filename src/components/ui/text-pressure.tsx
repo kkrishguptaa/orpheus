@@ -117,7 +117,7 @@ const TextPressure: React.FC<TextPressureProps> = ({
     setSize();
     window.addEventListener("resize", setSize);
     return () => window.removeEventListener("resize", setSize);
-  }, [scale, text]);
+  }, [scale, text, setSize]);
 
   useEffect(() => {
     let rafId: number;
