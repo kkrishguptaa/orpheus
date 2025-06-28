@@ -1,5 +1,4 @@
 import AuthorImage from "./AuthorImage";
-import Image from "next/image";
 
 export default function Author() {
   return (

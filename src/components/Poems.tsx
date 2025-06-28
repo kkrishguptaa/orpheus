@@ -1,8 +1,6 @@
 import { getPoems } from "@/app/poems/utils";
 import getRelativeTime from "@/util/date";
 import Link from "next/link";
-import CircularText from "./ui/circle-text";
-import HeroBackdrop from "./HeroBackdrop";
 
 export default async function Poems() {
   const poems = (await getPoems()).sort((a, b) =>
