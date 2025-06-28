@@ -12,6 +12,7 @@ interface Poem {
   title: string;
   slug: string;
   frontmatter: PoemFrontmatter;
+  content: string;
 }
 
 export async function getPoem(slug: string): Promise<Poem> {

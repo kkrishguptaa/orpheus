@@ -149,7 +149,7 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
           key={i}
           ref={i === 0 ? copyRef : null}
         >
-          {children}
+          {children} •
         </span>
       );
     }
@@ -162,7 +162,7 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
         <motion.div
           className={`${
             scrollerClassName ?? ""
-          } flex whitespace-nowrap text-center text-2xl font-bold tracking-[-0.02em] drop-shadow md:text-[5rem] md:leading-[5rem]`}
+          } flex whitespace-nowrap text-center space-x-[2ch] text-2xl font-bold tracking-[-0.02em] drop-shadow md:text-[5rem] md:leading-[5rem]`}
           style={{ x, ...scrollerStyle }}
         >
           {spans}
