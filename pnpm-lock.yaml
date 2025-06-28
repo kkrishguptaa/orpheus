@@ -47,6 +47,9 @@ importers:
       react-icons:
         specifier: ^5.5.0
         version: 5.5.0(react@19.1.0)
+      require-in-the-middle:
+        specifier: ^7.5.2
+        version: 7.5.2
     devDependencies:
       '@eslint/eslintrc':
         specifier: ^3
@@ -6489,7 +6492,7 @@ snapshots:
     dependencies:
       debug: 4.4.1
       module-details-from-path: 1.0.4
-      resolve: 1.22.8
+      resolve: 1.22.10
     transitivePeerDependencies:
       - supports-color
 

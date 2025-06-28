@@ -39,9 +39,11 @@ export default async function Poem(props: Props) {
   console.log(poem.title);
 
   return (
-    <article className="prose prose-invert prose-zinc prose-2xl">
-      <MDX />
-    </article>
+    <main className="flex flex-col w-full items-center justify-center min-h-[50vh] p-12 sm:px-40 md:px-60 lg:px-80 xl:px-120">
+      <article className="prose prose-invert prose-zinc prose-2xl prose-p:my-0">
+        <MDX />
+      </article>
+    </main>
   );
 }
 

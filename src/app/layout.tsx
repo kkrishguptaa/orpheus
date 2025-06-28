@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import "@/styles/globals.css";
 import { Italiana, EB_Garamond } from "next/font/google";
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         <>{children}</>
+        <Footer />
       </body>
     </html>
   );

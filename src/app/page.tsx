@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="snap-y snap-mandatory">
       <Hero />
-      <PoemList />
+      <PoemList limit={10} />
       <Author />
     </main>
   );
