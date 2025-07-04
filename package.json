@@ -20,7 +20,7 @@
     "clsx": "^2.1.1",
     "gray-matter": "^4.0.3",
     "motion": "^12.19.2",
-    "next": "15.3.4",
+    "next": "15.3.5",
     "react": "^19.0.0",
     "react-animated-cursor": "^2.11.2",
     "react-dom": "^19.0.0",
@@ -28,15 +28,15 @@
     "require-in-the-middle": "^7.5.2"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "15.3.4",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "@eslint/eslintrc": "3.3.1",
+    "@tailwindcss/postcss": "4.1.11",
+    "@types/node": "20.19.1",
+    "@types/react": "19.1.8",
+    "@types/react-dom": "19.1.6",
+    "eslint": "9.29.0",
+    "eslint-config-next": "15.3.5",
+    "eslint-plugin-react-hooks": "5.2.0",
+    "tailwindcss": "4.1.11",
+    "typescript": "5.8.3"
   }
 }
