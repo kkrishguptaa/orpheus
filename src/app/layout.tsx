@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import "@/styles/globals.css";
 import { Italiana, EB_Garamond } from "next/font/google";
+import { Metadata } from "next";
 
 const italiana = Italiana({
   subsets: ["latin"],
@@ -16,6 +17,28 @@ const ebGaramond = EB_Garamond({
   variable: "--font-eb-garamond",
 });
 
+export const metadata: Metadata = {
+  title: "Orpheus | Poems by Krish Gupta",
+  description:
+    "Explore a collection of poems by Krish Gupta, delving into themes of love, loss, and the human experience. Thought-provoking verses that resonate with the soul.",
+  openGraph: {
+    title: "Orpheus | Poems by Krish Gupta",
+    description:
+      "Explore a collection of poems by Krish Gupta, delving into themes of love, loss, and the human experience. Thought-provoking verses that resonate with the soul.",
+    url: "https://orpheus.krishg.com",
+    siteName: "Orpheus",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Orpheus | Poems by Krish Gupta",
+    description:
+      "Explore a collection of poems by Krish Gupta, delving into themes of love, loss, and the human experience. Thought-provoking verses that resonate with the soul.",
+    creator: "@kkrishguptaa",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -23,6 +46,9 @@ export default function RootLayout({
 }>) {
   return (
     <html className={`${italiana.variable} ${ebGaramond.variable}`} lang="en">
+      <head>
+        <meta name="apple-mobile-web-app-title" content="Orpheus" />
+      </head>
       <body>
         <AnimatedCursor
           innerSize={8}

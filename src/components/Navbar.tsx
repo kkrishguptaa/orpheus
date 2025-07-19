@@ -3,10 +3,6 @@ import Link from "next/link";
 export default function Navbar() {
   const items = [
     {
-      name: "About",
-      href: "/about",
-    },
-    {
       name: "Poems",
       href: "/poems",
     },

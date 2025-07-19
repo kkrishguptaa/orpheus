@@ -19,6 +19,7 @@
     "@types/mdx": "^2.0.13",
     "clsx": "^2.1.1",
     "gray-matter": "^4.0.3",
+    "import-in-the-middle": "^1.14.2",
     "motion": "^12.19.2",
     "next": "15.3.4",
     "react": "^19.0.0",
