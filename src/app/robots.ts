@@ -5,8 +5,16 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: "/poems/",
     },
-    sitemap: "https://orpheus.krishg.com/sitemap.xml",
+    host: new URL(
+      process.env.VERCEL_URL
+        ? `https://${process.env.VERCEL_URL}`
+        : "https://orpheus.krishg.com"
+    ).toString(),
+    sitemap: `${new URL(
+      process.env.VERCEL_URL
+        ? `https://${process.env.VERCEL_URL}/sitemap.xml`
+        : "https://orpheus.krishg.com"
+    ).toString()}/sitemap.xml`,
   };
 }
