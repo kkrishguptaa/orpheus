@@ -6,15 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    host: new URL(
-      process.env.VERCEL_URL
-        ? `https://${process.env.VERCEL_URL}`
-        : "https://orpheus.krishg.com"
-    ).toString(),
-    sitemap: `${new URL(
-      process.env.VERCEL_URL
-        ? `https://${process.env.VERCEL_URL}/sitemap.xml`
-        : "https://orpheus.krishg.com"
-    ).toString()}/sitemap.xml`,
+    host: "https://orpheus.krishg.com",
+    sitemap: "https://orpheus.krishg.com/sitemap.xml",
   };
 }
