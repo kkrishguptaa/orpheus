@@ -4,7 +4,6 @@ import createMDX from "@next/mdx";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: process.env.PAGES_BASE_PATH,
   trailingSlash: false,
   pageExtensions: ["tsx", "mdx"],
   images: {
