@@ -26,6 +26,14 @@ export const metadata: Metadata = {
     title: "Orpheus | Poems by Krish Gupta",
     description:
       "Explore a collection of poems by Krish Gupta, delving into themes of love, loss, and the human experience. Thought-provoking verses that resonate with the soul.",
+    images: [
+      {
+        url: "https://orpheus.krishg.com/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Orpheus Open Graph Image",
+      },
+    ],
     url: "https://orpheus.krishg.com",
     siteName: "Orpheus",
     locale: "en_US",
@@ -33,6 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    images: ["https://orpheus.krishg.com/opengraph-image.png"],
     title: "Orpheus | Poems by Krish Gupta",
     description:
       "Explore a collection of poems by Krish Gupta, delving into themes of love, loss, and the human experience. Thought-provoking verses that resonate with the soul.",
