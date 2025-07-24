@@ -60,19 +60,22 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="Orpheus" />
       </head>
       <body>
-        <AnimatedCursor
-          innerSize={8}
-          outerSize={35}
-          innerScale={1.5}
-          outerScale={3}
-          outerAlpha={0}
-          innerStyle={{
-            backgroundColor: "var(--cursor-color)",
-          }}
-          outerStyle={{
-            border: "3px solid var(--cursor-color)",
-          }}
-        />
+        <div className="hidden sm:block">
+          <AnimatedCursor
+            innerSize={8}
+            outerSize={35}
+            innerScale={1.5}
+            outerScale={3}
+            outerAlpha={0}
+            innerStyle={{
+              backgroundColor: "var(--cursor-color)",
+            }}
+            outerStyle={{
+              border: "3px solid var(--cursor-color)",
+            }}
+            showSystemCursor={true}
+          />
+        </div>
         <Navbar />
         <>{children}</>
         <Footer />
