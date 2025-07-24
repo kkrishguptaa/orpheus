@@ -30,6 +30,14 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
     openGraph: {
       title: `${title} | Poem by Krish Gupta - Orpheus`,
       description: `Read the poem "${title}" by Krish Gupta on Orpheus. Explore themes of love, loss, and the human experience through this thought-provoking verse.`,
+      images: [
+        {
+          url: `https://orpheus.krishg.com/opengraph-image.png`,
+          width: 1200,
+          height: 630,
+          alt: `Open Graph image for the poem "${title}" by Krish Gupta`,
+        },
+      ],
       url: `https://orpheus.krishg.com/poems/${slug}`,
       siteName: "Orpheus",
       locale: "en_US",
@@ -41,6 +49,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
+      images: ["https://orpheus.krishg.com/opengraph-image.png"],
       title: `${title} | Poem by Krish Gupta - Orpheus`,
       description: `Read the poem "${title}" by Krish Gupta on Orpheus. Explore themes of love, loss, and the human experience through this thought-provoking verse.`,
       creator: "@kkrishguptaa",
