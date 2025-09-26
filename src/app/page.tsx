@@ -1,13 +1,14 @@
-import Author from "@/components/Author";
-import Hero from "@/components/Hero";
-import LatinVelocity from "@/components/LatinVelocity";
-import PoemList from "@/components/PoemList";
+import Author from '@/components/Author';
+import LatinVelocity from '@/components/LatinVelocity';
+import PoemList from '@/components/PoemList';
+import { getPoems } from '@/util/notion';
 
-export default function Home() {
+export default async function Home() {
+  const poems = await getPoems();
+
   return (
     <main className="snap-y snap-mandatory">
-      <Hero />
-      <PoemList limit={10} />
+      <PoemList poems={poems} />
       <Author />
       <LatinVelocity />
     </main>

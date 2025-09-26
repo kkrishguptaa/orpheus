@@ -1,53 +1,43 @@
-import AnimatedCursor from "react-animated-cursor";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import "@/styles/globals.css";
-import { Italiana, EB_Garamond } from "next/font/google";
-import { Metadata } from "next";
-
-const italiana = Italiana({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-italiana",
-});
+import '@/styles/globals.css';
+import ms from 'ms';
+import type { Metadata } from 'next';
+import { EB_Garamond } from 'next/font/google';
+import AnimatedCursor from 'react-animated-cursor';
+import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
+import { cn } from '@/util/css';
 
 const ebGaramond = EB_Garamond({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-eb-garamond",
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  variable: '--font-eb-garamond',
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://orpheus.krishg.com"),
-  title: "Orpheus | Poems by Krish Gupta",
+  metadataBase: new URL('https://poems.krishg.com'),
+  title: 'Poems by Krish Gupta',
   description:
-    "Explore a collection of poems by Krish Gupta, delving into themes of love, loss, and the human experience. Thought-provoking verses that resonate with the soul.",
+    'Explore a collection of poems by Krish Gupta, delving into themes of love, loss, and the human experience. Thought-provoking verses that resonate with the soul.',
   openGraph: {
-    title: "Orpheus | Poems by Krish Gupta",
+    title: 'Poems by Krish Gupta',
     description:
-      "Explore a collection of poems by Krish Gupta, delving into themes of love, loss, and the human experience. Thought-provoking verses that resonate with the soul.",
-    images: [
-      {
-        url: "https://orpheus.krishg.com/opengraph-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Orpheus Open Graph Image",
-      },
-    ],
-    url: "https://orpheus.krishg.com",
-    siteName: "Orpheus",
-    locale: "en_US",
-    type: "website",
+      'Explore a collection of poems by Krish Gupta, delving into themes of love, loss, and the human experience. Thought-provoking verses that resonate with the soul.',
+    url: 'https://poems.krishg.com',
+    siteName: 'Poems',
+    locale: 'en_US',
+    type: 'website',
   },
   twitter: {
-    card: "summary_large_image",
-    images: ["https://orpheus.krishg.com/opengraph-image.png"],
-    title: "Orpheus | Poems by Krish Gupta",
+    card: 'summary_large_image',
+    images: ['https://poems.krishg.com/opengraph-image.png'],
+    title: 'Poems by Krish Gupta',
     description:
-      "Explore a collection of poems by Krish Gupta, delving into themes of love, loss, and the human experience. Thought-provoking verses that resonate with the soul.",
-    creator: "@kkrishguptaa",
+      'Explore a collection of poems by Krish Gupta, delving into themes of love, loss, and the human experience. Thought-provoking verses that resonate with the soul.',
+    creator: '@kkrishguptaa',
   },
 };
+
+export const revalidate = ms('1d'); // 1 day
 
 export default function RootLayout({
   children,
@@ -55,10 +45,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className={`${italiana.variable} ${ebGaramond.variable}`} lang="en">
-      <head>
-        <meta name="apple-mobile-web-app-title" content="Orpheus" />
-      </head>
+    <html
+      className={cn(
+        `${ebGaramond.variable}`,
+        'antialiased scroll-smooth',
+        'bg-zinc-50 dark:bg-zinc-950 text-zinc-800 dark:text-zinc-300',
+        'font-text',
+      )}
+      lang="en"
+    >
       <body>
         <div className="hidden sm:block">
           <AnimatedCursor
@@ -68,16 +63,16 @@ export default function RootLayout({
             outerScale={3}
             outerAlpha={0}
             innerStyle={{
-              backgroundColor: "var(--cursor-color)",
+              backgroundColor: 'var(--cursor-color)',
             }}
             outerStyle={{
-              border: "3px solid var(--cursor-color)",
+              border: '3px solid var(--cursor-color)',
             }}
             showSystemCursor={true}
           />
         </div>
         <Navbar />
-        <>{children}</>
+        {children}
         <Footer />
       </body>
     </html>
