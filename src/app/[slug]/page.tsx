@@ -1,20 +1,12 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Fragment } from 'react';
-import { getPoem, getPoemContent, getPoems } from '@/util/notion';
+import { getPoem, getPoemContent } from '@/util/notion';
 
 interface Props {
   params: Promise<{
     slug: string;
   }>;
-}
-
-export async function generateStaticParams() {
-  const poems = await getPoems();
-
-  return poems.map((poem) => ({
-    slug: `${encodeURIComponent(poem.properties.Name.title.replaceAll(' ', '-'))}:${poem.id}`,
-  }));
 }
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
@@ -56,8 +48,8 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   };
 }
 
-export default async function Poem(props: Props) {
-  const { slug } = await props.params;
+export default async function Poem({ params }: Props) {
+  const { slug } = await params;
   const [_title, id] = decodeURIComponent(slug).split(':');
 
   const poem = await getPoem(id);

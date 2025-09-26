@@ -26,9 +26,6 @@ importers:
       motion:
         specifier: ^12.23.22
         version: 12.23.22(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      ms:
-        specifier: ^2.1.3
-        version: 2.1.3
       next:
         specifier: 15.5.4
         version: 15.5.4(@opentelemetry/api@1.9.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
@@ -654,9 +651,6 @@ packages:
       react-dom:
         optional: true
 
-  ms@2.1.3:
-    resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
-
   nanoid@3.3.11:
     resolution: {integrity: sha512-N8SpfPUnUp1bK+PMYW8qSWdl9U+wwNWI4QKxOYDy9JAro3WMX7p2OeVRF9v+347pnakNevPmiHhNmZ2HbFA76w==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
@@ -1200,8 +1194,6 @@ snapshots:
     optionalDependencies:
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
-
-  ms@2.1.3: {}
 
   nanoid@3.3.11: {}
 

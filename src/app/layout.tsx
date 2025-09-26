@@ -1,5 +1,4 @@
 import '@/styles/globals.css';
-import ms from 'ms';
 import type { Metadata } from 'next';
 import { EB_Garamond } from 'next/font/google';
 import AnimatedCursor from 'react-animated-cursor';
@@ -36,8 +35,6 @@ export const metadata: Metadata = {
     creator: '@kkrishguptaa',
   },
 };
-
-export const revalidate = ms('1d'); // 1 day
 
 export default function RootLayout({
   children,
