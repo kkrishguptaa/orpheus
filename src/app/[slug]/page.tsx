@@ -9,6 +9,8 @@ interface Props {
   }>;
 }
 
+export const revalidate = false;
+
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const params = await props.params;
 
