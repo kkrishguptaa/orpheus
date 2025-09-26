@@ -3,7 +3,7 @@
 import { motion, useMotionValue, useTransform } from 'motion/react';
 import Image from 'next/image';
 import { useEffect } from 'react';
-import AuthorImageSource from '@/assets/author.png';
+import AuthorImageSource from '@/assets/author.webp';
 
 export default function AuthorImage() {
   /**

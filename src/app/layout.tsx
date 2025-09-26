@@ -2,6 +2,7 @@ import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { EB_Garamond } from 'next/font/google';
 import AnimatedCursor from 'react-animated-cursor';
+import OGImage from '@/assets/opengraph-image.webp';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import { cn } from '@/util/css';
@@ -22,13 +23,22 @@ export const metadata: Metadata = {
     description:
       'Explore a collection of poems by Krish Gupta, delving into themes of love, loss, and the human experience. Thought-provoking verses that resonate with the soul.',
     url: 'https://poems.krishg.com',
+    images: {
+      url: OGImage.src,
+      width: OGImage.width,
+      height: OGImage.height,
+    },
     siteName: 'Poems',
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    images: ['https://poems.krishg.com/opengraph-image.png'],
+    images: {
+      url: OGImage.src,
+      width: OGImage.width,
+      height: OGImage.height,
+    },
     title: 'Poems by Krish Gupta',
     description:
       'Explore a collection of poems by Krish Gupta, delving into themes of love, loss, and the human experience. Thought-provoking verses that resonate with the soul.',

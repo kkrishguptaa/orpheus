@@ -10,6 +10,7 @@ export default async function PoemList({
 }) {
   return (
     <div className="w-full">
+      <h2 className="w-full text-6xl text-white font-black mb-8">Poems</h2>
       <Backdrop poemsCount={poems.length} />
       <div className="flex flex-col items-center justify-center py-12 px-8 container mx-auto max-w-lg">
         <nav className="w-full space-y-4 text-xl">

@@ -3,10 +3,10 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import BackgroundImage1 from '@/assets/orpheus-1.jpg';
-import BackgroundImage2 from '@/assets/orpheus-2.jpg';
-import BackgroundImage3 from '@/assets/orpheus-3.jpg';
-import BackgroundImage4 from '@/assets/orpheus-4.jpg';
+import BackgroundImage1 from '@/assets/orpheus-1.webp';
+import BackgroundImage2 from '@/assets/orpheus-2.webp';
+import BackgroundImage3 from '@/assets/orpheus-3.webp';
+import BackgroundImage4 from '@/assets/orpheus-4.webp';
 
 export default function Backdrop({ poemsCount = 10 }: { poemsCount: number }) {
   const [isMobile, setIsMobile] = useState(false);
