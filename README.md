@@ -2,7 +2,7 @@
 
 NextJs Poetry Showcase Website with Notion as CMS
 
-![A screenshot of the Orpheus Website](https://github.com/user-attachments/assets/497c0f60-3a38-40d5-bb11-ee83401210b5)
+[![A screenshot of the Orpheus Website](https://github.com/kkrishguptaa/orpheus/raw/main/.github/screenshot.png)](https://poems.krishg.com)
 
 ## 👋 Introduction
 
@@ -40,6 +40,12 @@ The notion database is expected to have the following properties:
 I use a Notion automation to set the `Written` date to the current date when the `Status` is changed to `Written`. This ensures that the `Written` date is always accurate and up-to-date.
 
 The "Category" property exists solely because I write more than just poems in that one Notion database.
+
+### Vercel
+
+This website is hosted on Vercel. If you want to deploy it yourself, you can use this handy button:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fkkrishguptaa%2Forpheus&env=NOTION_API_KEY,NOTION_DATA_SOURCE_ID&envDescription=Values%20needed%20for%20Notion%20to%20work.&envLink=https%3A%2F%2Fgithub.com%2Fkkrishguptaa%2Forpheus%23environment-variables&project-name=orpheus&repository-name=orpheus&demo-title=Orpheus&demo-description=NextJs%20Poetry%20Showcase%20Website%20with%20Notion%20as%20CMS&demo-url=https%3A%2F%2Fpoems.krishg.com&demo-image=https%3A%2F%2Fgithub.com%2Fkkrishguptaa%2Forpheus%2Fraw%2Fmain%2F.github%2Fscreenshot.png)
 
 ## ✌️ Deployment
 
