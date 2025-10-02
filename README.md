@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Orpheus
 
-## Getting Started
+NextJs Poetry Showcase Website with Notion as CMS
 
-First, run the development server:
+![A screenshot of the Orpheus Website](https://github.com/user-attachments/assets/497c0f60-3a38-40d5-bb11-ee83401210b5)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 👋 Introduction
+
+What is the world but a collection of words? Everything we see, feel, and experience is an assumption, a belief, a word. I am a poet who believes in the power of words to shape our reality. Through my poetry, I explore the depths of human emotion, the beauty of nature, and the complexities of life.
+
+To let the world grasp my poems, I build Orpheus, the website where I showcase them. It is designed to be infrastructure-efficient, fast, and easy to use. I use Notion as my CMS, which allows me to write and manage my poems in a familiar environment. The website is built with Next.js, a powerful framework for building web applications.
+
+
+## 📦 Tech Stack
+
+- [Next.js](https://nextjs.org/) - React framework.
+- [Tailwind CSS](https://tailwindcss.com/) - CSS framework.
+- [Notion](https://www.notion.so/) - CMS for managing poems.
+- [Vercel](https://vercel.com/) - Hosting platform.
+- [TypeScript](https://www.typescriptlang.org/) - Type-safe JavaScript.
+
+### Next.js
+
+None of the routes generated are static. The home page is rendered on ISR (Incremental Static Regeneration) every 24 hours. Each poem page is server-rendered once and kept forever. The expectation is that published poems shall not receive any edits, while I can still write new poems and publish them.
+
+The image optimization provided by Next.js is NOT used. All images are optimised before putting them in the repository. I have used `cwebp` and `svgo` to optimise images.
+
+### Notion
+
+The notion database is expected to have the following properties:
+
+| Property Name | Type     | Description                         |
+| ------------- | -------- | ----------------------------------- |
+| Name          | Title    | The title of the poem.              |
+| Category      | Select   | Filtering for "Poem"                |
+| Status        | Select   | Filtering for "Written" (Published) |
+| Written       | Date     | The date the poem was written.      |
+
+
+I use a Notion automation to set the `Written` date to the current date when the `Status` is changed to `Written`. This ensures that the `Written` date is always accurate and up-to-date.
+
+The "Category" property exists solely because I write more than just poems in that one Notion database.
+
+## ✌️ Deployment
+
+### Environment Variables
+
+The following environment variables are required to run the project:
+
+```ini
+NOTION_API_KEY=your_notion_api_key
+NOTION_DATA_SOURCE_ID=your_notion_database_id
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You can obtain the `NOTION_API_KEY` by creating an integration in Notion and sharing your database with that integration. The `NOTION_DATA_SOURCE_ID` is the ID of your Notion data source, which can be options menu of your database view in Notion.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![Notion Data Source ID](https://github.com/user-attachments/assets/99238922-d8c0-46b6-b141-97f0bb3e929f)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Running Locally
 
-## Learn More
+1. Clone the repository:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   git clone https://github.com/kkrishguptaa/orpheus.git
+   ```
+2. Navigate to the project directory:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   cd orpheus
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Install dependencies:
 
-## Deploy on Vercel
+    ```bash
+    pnpm install
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Create a `.env` file in the root directory and add the required environment variables.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5. Run the development server:
+
+   ```bash
+   pnpm dev
+   ```
+
+## 📜 License
+
+This source code for this project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it as per the terms of the license. However, the poems showcased on the website are my original work and are protected under copyright law. Please do not use or reproduce them without my permission.
