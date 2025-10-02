@@ -24,13 +24,13 @@ jobs:
       PR_BRANCH: release-ci-${{ github.sha }}
 
     steps:
-      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
       - name: Create Branch
         run: |
           git checkout -b ${{ env.PR_BRANCH }}
 
       - name: Create Changelog
-        uses: TriPSs/conventional-changelog-action@dd734f74fce61a6e02f821ee1b5930bc79a23534 # v5
+        uses: TriPSs/conventional-changelog-action@3c4970b6573374889b897403d2f1278c395ea0df # v5
         id: changelog
         with:
           git-user-name: "github-actions[bot]"
@@ -62,7 +62,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
 
       - name: Create Release
         uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844 # v1
