@@ -1,6 +1,6 @@
 {
   "name": "orpheus",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "packageManager": "pnpm@10.18.0",
   "scripts": {
