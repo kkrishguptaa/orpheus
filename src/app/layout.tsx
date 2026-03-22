@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: 'Poems by Krish Gupta',
     description:
       'Explore a collection of poems by Krish Gupta, delving into themes of love, loss, and the human experience. Thought-provoking verses that resonate with the soul.',
-    creator: '@kkrishguptaa',
+    creator: '@krishstrucktech',
   },
 };
 

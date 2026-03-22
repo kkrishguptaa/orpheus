@@ -5,7 +5,7 @@ export default function Navbar() {
   const items = [
     {
       name: 'Portfolio',
-      href: 'https://krishg.com',
+      href: 'https://www.krishg.com',
       external: true,
       desktopOnly: false,
     },

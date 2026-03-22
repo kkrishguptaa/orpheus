@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Fragment } from 'react';
-import { getPoem, getPoemContent } from '@/util/notion';
+import { getPoem, getPoemContent, getPoems } from '@/util/notion';
 
 interface Props {
   params: Promise<{
@@ -10,6 +10,7 @@ interface Props {
 }
 
 export const revalidate = false;
+export const dynamicParams = true;
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const params = await props.params;
@@ -38,16 +39,24 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       modifiedTime: (
         poem.properties.Written.end || poem.properties.Written.start
       ).toISOString(),
-      authors: ['https://krishg.com'],
+      authors: ['https://www.krishg.com'],
       tags: [title, 'Poetry', 'Krish Gupta'],
     },
     twitter: {
       card: 'summary',
       title: `${title} | Poem by Krish Gupta`,
       description: `Read the poem "${title}" by Krish Gupta. Explore themes of love, loss, and the human experience through this thought-provoking verse.`,
-      creator: '@kkrishguptaa',
+      creator: '@krishstrucktech',
     },
   };
+}
+
+export async function generateStaticParams() {
+  const poems = await getPoems();
+
+  return poems.map((poem) => ({
+    slug: `${encodeURIComponent(poem.properties.Name.title.replaceAll(' ', '-'))}:${poem.id}`,
+  }));
 }
 
 export default async function Poem({ params }: Props) {
