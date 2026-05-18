@@ -16,7 +16,7 @@
     "@types/mdx": "^2.0.13",
     "clsx": "^2.1.1",
     "motion": "^12.23.22",
-    "next": "15.5.4",
+    "next": "15.5.9",
     "react": "^19.1.1",
     "react-animated-cursor": "^2.11.2",
     "react-dom": "^19.1.1",
